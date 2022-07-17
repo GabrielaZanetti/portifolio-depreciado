@@ -1,2 +1,1 @@
-# portifolio
-Este é meu portifólio onde vou postar projetos de cursos e feitos inportantes
+# Este e meu repositorio do meu Portfolio
