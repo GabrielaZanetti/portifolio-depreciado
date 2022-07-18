@@ -1,49 +1,225 @@
 $fundo-principal: #161b22;
-body{
+
+body {
 	background-color: #000;
-	#headerIndex{
+	#headerIndex {
 		min-height: 100px;
 		background-color: $fundo-principal;
 		display: flex;
 		align-items: center;
 		margin-bottom: 20px;
-		nav{
+		nav {
 			background-color: $fundo-principal !important;
-			a{
+
+			a {
 				color: #fff !important;
 				border-bottom: $fundo-principal 2px solid;
-				&:hover{
+
+				&:hover {
 					color: #d6d6d6 !important;
 					border-bottom: #fff 2px solid;
 				}
 			}
 		}
 	}
-	#mainIndex{
-		.img-sobre {
-			display: flex;
-			align-items: center;
-			img {
-				width: 100%;
-				border-radius: 100%;	
+	#mainIndex {
+		section {
+		margin-bottom: 30px;
+			.img-sobre {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				img {
+					max-width: 100%;
+					border-radius: 100%;
+					@media (max-width: 770px) {
+						height: 200px;
+					}
+				}
+			}
+			.text-sobre {
+				display: flex;
+				align-items: center;
+				color: #fff;
+				border: 1px solid;
+				padding: 15px;
+				border-radius: 5px;
+			}
+			.content {
+				height: 160px;
+				overflow:hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				&__container {
+					display: flex;
+					flex-direction: column;
+					overflow: hidden;
+					height: 120px;
+					img {
+						height: 120px;
+						max-width: 100%;
+						border-radius: 0px;
+					}
+					&__list {
+						animation: change 10s infinite;
+						display: flex;
+						flex-direction: column;
+						align-content: center;
+						align-items: center;
+						&__item {
+							line-height:40px;
+							margin:0;
+						}
+					}
+				}
+			}
+			.porcentFacul{
+				color: #fff;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				.progress {
+					width: 150px;
+					height: 150px;
+					line-height: 150px;
+					background: none;
+					margin: 0 auto;
+					box-shadow: none;
+					position: relative;
+					justify-content: center;
+					&:after {
+						content: "";
+						width: 100%;
+						height: 100%;
+						border-radius: 50%;
+						border: 7px solid #eee;
+						position: absolute;
+						top: 0;
+						left: 0;
+					}
+					> span {
+						width: 50%;
+						height: 100%;
+						overflow: hidden;
+						position: absolute;
+						top: 0;
+						z-index: 1;
+					}
+					.progress-left {
+						left: 0;
+					}
+					.progress-bar {
+						width: 100%;
+						height: 100%;
+						background: none;
+						border-width: 7px;
+						border-style: solid;
+						position: absolute;
+						top: 0;
+						border-color: #ffb43e;
+					}
+					.progress-left .progress-bar {
+						left: 100%;
+						border-top-right-radius: (150px/2);;
+						border-bottom-right-radius: (150px/2);;
+						border-left: 0;
+						-webkit-transform-origin: center left;
+						transform-origin: center left;
+					}
+					.progress-right {
+						right: 0;
+						.progress-bar {
+							left: -100%;
+							border-top-left-radius: (150px/2);;
+							border-bottom-left-radius: (150px/2);;
+							border-right: 0;
+							-webkit-transform-origin: center right;
+							transform-origin: center right;
+						}
+					}
+					.progress-value {
+						display: flex;
+						border-radius: 50%;
+						font-size: 36px;
+						text-align: center;
+						line-height: 20px;
+						align-items: center;
+						justify-content: center;
+						height: 100%;
+						font-weight: 300;
+						div {
+							margin-top: 10px;
+						}
+						span {
+							font-size: 12px;
+							text-transform: uppercase;
+						}
+					}
+				}
 			}
 		}
-		.text-sobre{
-			display: flex;
-			align-items: center;
-			color: #fff;
-			border: 1px solid;
-			padding: 15px;
-			border-radius: 5px;
-		}
 	}
-	#footer{
+	#footer {
 		background-color: $fundo-principal;
 		color: #fff;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 50px;
-		margin-top: 20px;
 	}
 }
+/*	Animacoes	*/	
+	@keyframes change {
+		0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+		16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+		33.32%,45.98% {transform:translate3d(0,-50%,0);}
+		49.98%,62.64% {transform:translate3d(0,-75%,0);}
+		66.64%,79.3% {transform:translate3d(0,-50%,0);}
+		83.3%,95.96% {transform:translate3d(0,-25%,0);}
+	}
+	
+	$howManySteps: 10;
+	$borderWidth: 7px;
+	$animationTime: 1.5s;
+	@for $i from 1 through $howManySteps {
+		$stepName: ($i*(100 / $howManySteps));
+		@if $i <= ($howManySteps/2) { 
+			.progress[data-percentage="#{$stepName}"] {
+				.progress-right .progress-bar {
+					animation: loading-#{$i} $animationTime linear forwards;
+				}
+				.progress-left .progress-bar {animation: 0;}
+			}
+		}
+		@if $i > ($howManySteps/2)  {   n 
+			.progress[data-percentage="#{$stepName}"] {
+				.progress-right .progress-bar {
+					animation: loading-#{($howManySteps/2)} $animationTime linear forwards; 
+				}
+				.progress-left .progress-bar {
+		animation: loading-#{$i - ($howManySteps/2)} $animationTime linear forwards $animationTime;
+		}
+			}
+		}
+	}
+
+	@for $i from 1 through ($howManySteps/2) { 
+		$degrees: (180/($howManySteps/2));
+		$degrees: ($degrees*$i);
+		@keyframes loading-#{$i}{
+			0%{
+				-webkit-transform: rotate(0deg);
+				transform: rotate(0deg);
+			}
+			100%{
+				-webkit-transform: rotate($degrees);
+					transform: rotate(#{$degrees}deg);
+			}
+		}
+	}
+	.progress {
+		margin-bottom: 1em;
+	}
