@@ -20,3 +20,7 @@ var novo = new Date,
 
 $('#idade').append(idade(2001, 08, 24))
 $('#anoAtual').append(ano)
+
+var quantFac = Math.round((4/44)*10)
+$('#porcent').attr('data-percentage', quantFac)
+$('#porcent-numb').append(quantFac+"%")
