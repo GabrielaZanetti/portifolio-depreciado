@@ -172,12 +172,12 @@ body #social-links a i {
   margin-right: 5px;
 }
 body #social-links .github-link:hover {
-  background-color: #fff;
+  background-color: #ccc;
   color: #000;
   border: 1px solid #000;
 }
 body #social-links .linkedin-link:hover {
-  background-color: #fff;
+  background-color: #ccc;
   color: #0e76a8;
   border: 1px solid #0e76a8;
 }
@@ -185,6 +185,16 @@ body #social-links .insta-link:hover {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   color: #fff;
   border: 1px solid #000;
+}
+body #social-links .discord-link:hover {
+  background: #1e2124;
+  color: #7289DA;
+  border: 1px solid #1e2124;
+}
+body #social-links .at-link:hover {
+  background: linear-gradient(100deg, rgb(62, 101, 207) 0%, rgb(199, 22, 16) 25%, rgb(242, 166, 12) 50%, rgb(59, 96, 196) 75%, rgb(8, 133, 27) 100%);
+  color: #fff;
+  border: 1px solid #1e2124;
 }
 body #footer {
   background-color: #161b22;
