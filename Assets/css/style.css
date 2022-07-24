@@ -130,6 +130,24 @@ body #mainIndex .linguagens {
   color: #EAE0D5;
   font-size: 50px;
 }
+body #mainIndex .linguagens .fa-html5 {
+  color: #f06729;
+}
+body #mainIndex .linguagens .fa-css3-alt {
+  color: #4029f0;
+}
+body #mainIndex .linguagens .fa-sass {
+  color: #f02983;
+}
+body #mainIndex .linguagens .fa-js-square {
+  color: #f0e629;
+}
+body #mainIndex .linguagens .fa-php {
+  color: #9329f0;
+}
+body #mainIndex .linguagens .fa-bootstrap {
+  color: #5e0fa4;
+}
 body #social-links {
   display: flex;
   flex-direction: column;
