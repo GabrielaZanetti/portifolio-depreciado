@@ -135,6 +135,24 @@ body {
 			text-align: center;
 			color: $border-text;
 			font-size: 50px;
+			.fa-html5{
+				color: #f06729;
+			}
+			.fa-css3-alt{
+				color: #4029f0;
+			}
+			.fa-sass{
+				color: #f02983;
+			}
+			.fa-js-square{
+				color: #f0e629;
+			}
+			.fa-php{
+				color: #9329f0;
+			}
+			.fa-bootstrap{
+				color: #5e0fa4;
+			}
 		}
 	}
 	#social-links{
