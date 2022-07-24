@@ -1,19 +1,26 @@
-$fundo-principal: #161b22;
+/*	Fonts-import	*/
+	@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap');
+
+/*	Colors	*/
+	$fundo-menu: #161b22;
+	$background-body: #06070E;
+	$border-text: #EAE0D5;
 
 body {
-	background-color: #000;
+	background-color: $background-body;
 	#headerIndex {
 		min-height: 100px;
-		background-color: $fundo-principal;
+		background-color: $fundo-menu;
 		display: flex;
 		align-items: center;
 		margin-bottom: 20px;
 		nav {
-			background-color: $fundo-principal !important;
+			background-color: $fundo-menu !important;
 
 			a {
 				color: #fff !important;
-				border-bottom: $fundo-principal 2px solid;
+				border-bottom: $fundo-menu 2px solid;
 
 				&:hover {
 					color: #d6d6d6 !important;
@@ -23,27 +30,64 @@ body {
 		}
 	}
 	#mainIndex {
-		section {
-		margin-bottom: 30px;
+		h1{
+			text-align: center;
+			color: #EAE0D5 !important;
+			margin-bottom: 20px;
+			font-family: 'PT Serif Caption', serif;
+		}
+		hr{
+			color: $border-text;
+			height: 2px;
+			width: 80%;
+		}
+		.header-me{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.row-me {
+			display: flex;
+			justify-content: space-around;
+			margin-bottom: 30px;
 			.img-sobre {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				img {
-					max-width: 100%;
-					border-radius: 100%;
-					@media (max-width: 770px) {
-						height: 200px;
+				margin-top: 20px;
+				figure{
+					height: 200px;
+					width: 200px;
+					border-top: solid 1px $border-text;
+					border-bottom: solid 1px $border-text;
+					border-radius: 90%;
+    				padding: 5px;
+					margin: 0px 20px;
+					img {
+						max-width: 100%;
+						border-radius: 100%;
+						@media (max-width: 770px) {
+							height: 200px;
+						}
 					}
 				}
 			}
 			.text-sobre {
 				display: flex;
 				align-items: center;
+				margin-top: 20px;
 				color: #fff;
-				border: 1px solid;
+				border: 1px solid $border-text;
 				padding: 15px;
 				border-radius: 5px;
+				width: 50%;
+				p{
+					strong{
+						color: #C6AC8F;
+						font-size: 24px;
+						font-family: 'Source Code Pro', monospace;
+					}
+				}
 			}
 			.content {
 				height: 160px;
@@ -82,88 +126,63 @@ body {
 				align-items: center;
 				flex-direction: column;
 				.progress {
-					width: 150px;
-					height: 150px;
-					line-height: 150px;
-					background: none;
-					margin: 0 auto;
-					box-shadow: none;
-					position: relative;
-					justify-content: center;
-					&:after {
-						content: "";
-						width: 100%;
-						height: 100%;
-						border-radius: 50%;
-						border: 7px solid #eee;
-						position: absolute;
-						top: 0;
-						left: 0;
-					}
-					> span {
-						width: 50%;
-						height: 100%;
-						overflow: hidden;
-						position: absolute;
-						top: 0;
-						z-index: 1;
-					}
-					.progress-left {
-						left: 0;
-					}
-					.progress-bar {
-						width: 100%;
-						height: 100%;
-						background: none;
-						border-width: 7px;
-						border-style: solid;
-						position: absolute;
-						top: 0;
-						border-color: #ffb43e;
-					}
-					.progress-left .progress-bar {
-						left: 100%;
-						border-top-right-radius: (150px/2);;
-						border-bottom-right-radius: (150px/2);;
-						border-left: 0;
-						-webkit-transform-origin: center left;
-						transform-origin: center left;
-					}
-					.progress-right {
-						right: 0;
-						.progress-bar {
-							left: -100%;
-							border-top-left-radius: (150px/2);;
-							border-bottom-left-radius: (150px/2);;
-							border-right: 0;
-							-webkit-transform-origin: center right;
-							transform-origin: center right;
-						}
-					}
-					.progress-value {
-						display: flex;
-						border-radius: 50%;
-						font-size: 36px;
-						text-align: center;
-						line-height: 20px;
-						align-items: center;
-						justify-content: center;
-						height: 100%;
-						font-weight: 300;
-						div {
-							margin-top: 10px;
-						}
-						span {
-							font-size: 12px;
-							text-transform: uppercase;
-						}
-					}
+					color: #000;					  
 				}
+			}
+		}
+		.linguagens{
+			margin-bottom: 20px;
+			text-align: center;
+			color: $border-text;
+			font-size: 50px;
+		}
+	}
+	#social-links{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 77vh;
+		a{
+			text-decoration: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 5px;
+			margin: 10px auto;
+			width: 50%;
+			border-radius: 10px;
+			font-size: 20px;
+			background-color: #000;
+			color: #fff;
+			border: 1px solid #fff;
+			i{
+				margin-right: 5px;
+			}
+		}
+		.github-link{
+			&:hover{
+				background-color: #fff;
+				color: #000;
+				border: 1px solid #000;
+			}
+		}
+		.linkedin-link{
+			&:hover{
+				background-color: #fff;
+				color: #0e76a8;
+				border: 1px solid #0e76a8;
+			}
+		}
+		.insta-link{
+			&:hover{
+				background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+				color: #fff;
+				border: 1px solid #000;
 			}
 		}
 	}
 	#footer {
-		background-color: $fundo-principal;
+		background-color: $fundo-menu;
 		color: #fff;
 		display: flex;
 		justify-content: center;
@@ -179,47 +198,4 @@ body {
 		49.98%,62.64% {transform:translate3d(0,-75%,0);}
 		66.64%,79.3% {transform:translate3d(0,-50%,0);}
 		83.3%,95.96% {transform:translate3d(0,-25%,0);}
-	}
-	
-	$howManySteps: 10;
-	$borderWidth: 7px;
-	$animationTime: 1.5s;
-	@for $i from 1 through $howManySteps {
-		$stepName: ($i*(100 / $howManySteps));
-		@if $i <= ($howManySteps/2) { 
-			.progress[data-percentage="#{$stepName}"] {
-				.progress-right .progress-bar {
-					animation: loading-#{$i} $animationTime linear forwards;
-				}
-				.progress-left .progress-bar {animation: 0;}
-			}
-		}
-		@if $i > ($howManySteps/2)  {   n 
-			.progress[data-percentage="#{$stepName}"] {
-				.progress-right .progress-bar {
-					animation: loading-#{($howManySteps/2)} $animationTime linear forwards; 
-				}
-				.progress-left .progress-bar {
-		animation: loading-#{$i - ($howManySteps/2)} $animationTime linear forwards $animationTime;
-		}
-			}
-		}
-	}
-
-	@for $i from 1 through ($howManySteps/2) { 
-		$degrees: (180/($howManySteps/2));
-		$degrees: ($degrees*$i);
-		@keyframes loading-#{$i}{
-			0%{
-				-webkit-transform: rotate(0deg);
-				transform: rotate(0deg);
-			}
-			100%{
-				-webkit-transform: rotate($degrees);
-					transform: rotate(#{$degrees}deg);
-			}
-		}
-	}
-	.progress {
-		margin-bottom: 1em;
 	}

@@ -1,5 +1,9 @@
+/*	Fonts-import	*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap");
+/*	Colors	*/
 body {
-  background-color: #000;
+  background-color: #06070E;
 }
 body #headerIndex {
   min-height: 100px;
@@ -19,50 +23,85 @@ body #headerIndex nav a:hover {
   color: #d6d6d6 !important;
   border-bottom: #fff 2px solid;
 }
-body #mainIndex section {
+body #mainIndex h1 {
+  text-align: center;
+  color: #EAE0D5 !important;
+  margin-bottom: 20px;
+  font-family: "PT Serif Caption", serif;
+}
+body #mainIndex hr {
+  color: #EAE0D5;
+  height: 2px;
+  width: 80%;
+}
+body #mainIndex .header-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #mainIndex .row-me {
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 30px;
 }
-body #mainIndex section .img-sobre {
+body #mainIndex .row-me .img-sobre {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
 }
-body #mainIndex section .img-sobre img {
+body #mainIndex .row-me .img-sobre figure {
+  height: 200px;
+  width: 200px;
+  border-top: solid 1px #EAE0D5;
+  border-bottom: solid 1px #EAE0D5;
+  border-radius: 90%;
+  padding: 5px;
+  margin: 0px 20px;
+}
+body #mainIndex .row-me .img-sobre figure img {
   max-width: 100%;
   border-radius: 100%;
 }
 @media (max-width: 770px) {
-  body #mainIndex section .img-sobre img {
+  body #mainIndex .row-me .img-sobre figure img {
     height: 200px;
   }
 }
-body #mainIndex section .text-sobre {
+body #mainIndex .row-me .text-sobre {
   display: flex;
   align-items: center;
+  margin-top: 20px;
   color: #fff;
-  border: 1px solid;
+  border: 1px solid #EAE0D5;
   padding: 15px;
   border-radius: 5px;
+  width: 50%;
 }
-body #mainIndex section .content {
+body #mainIndex .row-me .text-sobre p strong {
+  color: #C6AC8F;
+  font-size: 24px;
+  font-family: "Source Code Pro", monospace;
+}
+body #mainIndex .row-me .content {
   height: 160px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-body #mainIndex section .content__container {
+body #mainIndex .row-me .content__container {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   height: 120px;
 }
-body #mainIndex section .content__container img {
+body #mainIndex .row-me .content__container img {
   height: 120px;
   max-width: 100%;
   border-radius: 0px;
 }
-body #mainIndex section .content__container__list {
+body #mainIndex .row-me .content__container__list {
   -webkit-animation: change 10s infinite;
           animation: change 10s infinite;
   display: flex;
@@ -70,11 +109,11 @@ body #mainIndex section .content__container__list {
   align-content: center;
   align-items: center;
 }
-body #mainIndex section .content__container__list__item {
+body #mainIndex .row-me .content__container__list__item {
   line-height: 40px;
   margin: 0;
 }
-body #mainIndex section .porcentFacul {
+body #mainIndex .row-me .porcentFacul {
   color: #fff;
   text-align: center;
   display: flex;
@@ -82,81 +121,52 @@ body #mainIndex section .porcentFacul {
   align-items: center;
   flex-direction: column;
 }
-body #mainIndex section .porcentFacul .progress {
-  width: 150px;
-  height: 150px;
-  line-height: 150px;
-  background: none;
-  margin: 0 auto;
-  box-shadow: none;
-  position: relative;
-  justify-content: center;
+body #mainIndex .row-me .porcentFacul .progress {
+  color: #000;
 }
-body #mainIndex section .porcentFacul .progress:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 7px solid #eee;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-body #mainIndex section .porcentFacul .progress > span {
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-}
-body #mainIndex section .porcentFacul .progress .progress-left {
-  left: 0;
-}
-body #mainIndex section .porcentFacul .progress .progress-bar {
-  width: 100%;
-  height: 100%;
-  background: none;
-  border-width: 7px;
-  border-style: solid;
-  position: absolute;
-  top: 0;
-  border-color: #ffb43e;
-}
-body #mainIndex section .porcentFacul .progress .progress-left .progress-bar {
-  left: 100%;
-  border-top-right-radius: 75px;
-  border-bottom-right-radius: 75px;
-  border-left: 0;
-  transform-origin: center left;
-}
-body #mainIndex section .porcentFacul .progress .progress-right {
-  right: 0;
-}
-body #mainIndex section .porcentFacul .progress .progress-right .progress-bar {
-  left: -100%;
-  border-top-left-radius: 75px;
-  border-bottom-left-radius: 75px;
-  border-right: 0;
-  transform-origin: center right;
-}
-body #mainIndex section .porcentFacul .progress .progress-value {
-  display: flex;
-  border-radius: 50%;
-  font-size: 36px;
+body #mainIndex .linguagens {
+  margin-bottom: 20px;
   text-align: center;
-  line-height: 20px;
-  align-items: center;
+  color: #EAE0D5;
+  font-size: 50px;
+}
+body #social-links {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 100%;
-  font-weight: 300;
+  height: 77vh;
 }
-body #mainIndex section .porcentFacul .progress .progress-value div {
-  margin-top: 10px;
+body #social-links a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 10px auto;
+  width: 50%;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
 }
-body #mainIndex section .porcentFacul .progress .progress-value span {
-  font-size: 12px;
-  text-transform: uppercase;
+body #social-links a i {
+  margin-right: 5px;
+}
+body #social-links .github-link:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+body #social-links .linkedin-link:hover {
+  background-color: #fff;
+  color: #0e76a8;
+  border: 1px solid #0e76a8;
+}
+body #social-links .insta-link:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: #fff;
+  border: 1px solid #000;
 }
 body #footer {
   background-color: #161b22;
@@ -208,177 +218,3 @@ body #footer {
     transform: translate3d(0, -25%, 0);
   }
 }
-.progress[data-percentage="10"] .progress-right .progress-bar {
-  -webkit-animation: loading-1 1.5s linear forwards;
-          animation: loading-1 1.5s linear forwards;
-}
-.progress[data-percentage="10"] .progress-left .progress-bar {
-  -webkit-animation: 0;
-          animation: 0;
-}
-
-.progress[data-percentage="20"] .progress-right .progress-bar {
-  -webkit-animation: loading-2 1.5s linear forwards;
-          animation: loading-2 1.5s linear forwards;
-}
-.progress[data-percentage="20"] .progress-left .progress-bar {
-  -webkit-animation: 0;
-          animation: 0;
-}
-
-.progress[data-percentage="30"] .progress-right .progress-bar {
-  -webkit-animation: loading-3 1.5s linear forwards;
-          animation: loading-3 1.5s linear forwards;
-}
-.progress[data-percentage="30"] .progress-left .progress-bar {
-  -webkit-animation: 0;
-          animation: 0;
-}
-
-.progress[data-percentage="40"] .progress-right .progress-bar {
-  -webkit-animation: loading-4 1.5s linear forwards;
-          animation: loading-4 1.5s linear forwards;
-}
-.progress[data-percentage="40"] .progress-left .progress-bar {
-  -webkit-animation: 0;
-          animation: 0;
-}
-
-.progress[data-percentage="50"] .progress-right .progress-bar {
-  -webkit-animation: loading-5 1.5s linear forwards;
-          animation: loading-5 1.5s linear forwards;
-}
-.progress[data-percentage="50"] .progress-left .progress-bar {
-  -webkit-animation: 0;
-          animation: 0;
-}
-
-n .progress[data-percentage="60"] .progress-right .progress-bar {
-  -webkit-animation: loading-5 1.5s linear forwards;
-          animation: loading-5 1.5s linear forwards;
-}
-n .progress[data-percentage="60"] .progress-left .progress-bar {
-  -webkit-animation: loading-1 1.5s linear forwards 1.5s;
-          animation: loading-1 1.5s linear forwards 1.5s;
-}
-
-n .progress[data-percentage="70"] .progress-right .progress-bar {
-  -webkit-animation: loading-5 1.5s linear forwards;
-          animation: loading-5 1.5s linear forwards;
-}
-n .progress[data-percentage="70"] .progress-left .progress-bar {
-  -webkit-animation: loading-2 1.5s linear forwards 1.5s;
-          animation: loading-2 1.5s linear forwards 1.5s;
-}
-
-n .progress[data-percentage="80"] .progress-right .progress-bar {
-  -webkit-animation: loading-5 1.5s linear forwards;
-          animation: loading-5 1.5s linear forwards;
-}
-n .progress[data-percentage="80"] .progress-left .progress-bar {
-  -webkit-animation: loading-3 1.5s linear forwards 1.5s;
-          animation: loading-3 1.5s linear forwards 1.5s;
-}
-
-n .progress[data-percentage="90"] .progress-right .progress-bar {
-  -webkit-animation: loading-5 1.5s linear forwards;
-          animation: loading-5 1.5s linear forwards;
-}
-n .progress[data-percentage="90"] .progress-left .progress-bar {
-  -webkit-animation: loading-4 1.5s linear forwards 1.5s;
-          animation: loading-4 1.5s linear forwards 1.5s;
-}
-
-n .progress[data-percentage="100"] .progress-right .progress-bar {
-  -webkit-animation: loading-5 1.5s linear forwards;
-          animation: loading-5 1.5s linear forwards;
-}
-n .progress[data-percentage="100"] .progress-left .progress-bar {
-  -webkit-animation: loading-5 1.5s linear forwards 1.5s;
-          animation: loading-5 1.5s linear forwards 1.5s;
-}
-
-@-webkit-keyframes loading-1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(36deg);
-  }
-}
-
-@keyframes loading-1 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(36deg);
-  }
-}
-@-webkit-keyframes loading-2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(72deg);
-  }
-}
-@keyframes loading-2 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(72deg);
-  }
-}
-@-webkit-keyframes loading-3 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(108deg);
-  }
-}
-@keyframes loading-3 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(108deg);
-  }
-}
-@-webkit-keyframes loading-4 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(144deg);
-  }
-}
-@keyframes loading-4 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(144deg);
-  }
-}
-@-webkit-keyframes loading-5 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-@keyframes loading-5 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-.progress {
-  margin-bottom: 1em;
-}/*# sourceMappingURL=style.css.map */
