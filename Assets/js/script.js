@@ -21,6 +21,7 @@ var novo = new Date,
 $('#idade').append(idade(2001, 08, 24))
 $('#anoAtual').append(ano)
 
-var quantFac = Math.round((4/44)*10)
-$('#porcent').attr('data-percentage', quantFac)
+var quantFac = Math.round((4/44)*100)
 $('#porcent-numb').append(quantFac+"%")
+
+$('.progress-bar').css("width", quantFac+'%')
