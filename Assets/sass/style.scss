@@ -213,6 +213,16 @@ body {
 			}
 		}
 	}
+	#projetos-links{
+		#nav-tab{
+			.nav-link{
+				color: #fff;
+			}
+			.active{
+				color: #000;
+			}
+		}
+	}
 	#footer {
 		background-color: $fundo-menu;
 		color: #fff;

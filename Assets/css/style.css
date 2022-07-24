@@ -196,6 +196,12 @@ body #social-links .at-link:hover {
   color: #fff;
   border: 1px solid #1e2124;
 }
+body #projetos-links #nav-tab .nav-link {
+  color: #fff;
+}
+body #projetos-links #nav-tab .active {
+  color: #000;
+}
 body #footer {
   background-color: #161b22;
   color: #fff;
