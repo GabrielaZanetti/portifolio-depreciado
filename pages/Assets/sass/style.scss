@@ -168,10 +168,8 @@
 #transition{
     width: 100%;
     height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .card{
+    .card{  
+        margin: 0px auto;
         height: 400px;
         width: 500px;
         background-image: url('../img/Planet.png');

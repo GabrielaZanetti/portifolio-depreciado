@@ -50,6 +50,9 @@ body {
 			display: flex;
 			justify-content: space-around;
 			margin-bottom: 30px;
+			@media (max-width: 770px) {
+				flex-direction: column;
+			}
 			.img-sobre {
 				display: flex;
 				align-items: center;
@@ -81,6 +84,9 @@ body {
 				padding: 15px;
 				border-radius: 5px;
 				width: 50%;
+				@media (max-width: 770px) {
+					width: 100%;
+				}
 				p{
 					strong{
 						color: #C6AC8F;

@@ -44,6 +44,11 @@ body #mainIndex .row-me {
   justify-content: space-around;
   margin-bottom: 30px;
 }
+@media (max-width: 770px) {
+  body #mainIndex .row-me {
+    flex-direction: column;
+  }
+}
 body #mainIndex .row-me .img-sobre {
   display: flex;
   align-items: center;
@@ -77,6 +82,11 @@ body #mainIndex .row-me .text-sobre {
   padding: 15px;
   border-radius: 5px;
   width: 50%;
+}
+@media (max-width: 770px) {
+  body #mainIndex .row-me .text-sobre {
+    width: 100%;
+  }
 }
 body #mainIndex .row-me .text-sobre p strong {
   color: #C6AC8F;
