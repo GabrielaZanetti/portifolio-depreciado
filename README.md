@@ -22,4 +22,4 @@ Para clonar e instalar os projetos localmente, siga estas etapas:
 
 1. Clone o repositório:
    ```sh
-   git clone https://github.com/seu-usuario/seu-portifolio.git
+   git clone https://github.com/GabrielaZanetti/portifolio.git
