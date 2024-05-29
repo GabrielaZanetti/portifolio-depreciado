@@ -1,25 +1,34 @@
-# Meu Portfólio de Projetos
+# Meu PortfÃ³lio de Projetos
 
-Bem-vindo ao meu portfólio de projetos! Aqui você encontrará uma coleção de projetos que desenvolvi, demonstrando minhas habilidades e experiências em desenvolvimento de software.
+Bem-vindo ao meu portfÃ³lio de projetos! Aqui vocÃª encontrarÃ¡ uma coleÃ§Ã£o de projetos que desenvolvi, demonstrando minhas habilidades e experiÃªncias em desenvolvimento de software.
 
-## Tabela de Conteúdos
+## Tabela de ConteÃºdos
 
-- [Descrição](#descrição)
-- [Instalação](#instalação)
+- [DescriÃ§Ã£o](#descriÃ§Ã£o)
+- [InstalaÃ§Ã£o](#instalaÃ§Ã£o)
 - [Uso](#uso)
 - [Tecnologias](#tecnologias)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
+- [ContribuiÃ§Ã£o](#contribuiÃ§Ã£o)
+- [LicenÃ§a](#licenÃ§a)
 - [Contato](#contato)
 
-## Descrição
+## DescriÃ§Ã£o
 
-Este repositório contém uma variedade de projetos que desenvolvi ao longo da minha carreira. Cada projeto inclui uma descrição detalhada, instruções de instalação e uso, bem como as tecnologias utilizadas.
+Este repositÃ³rio contÃ©m uma variedade de projetos que desenvolvi ao longo da minha carreira. Cada projeto inclui uma descriÃ§Ã£o detalhada, instruÃ§Ãµes de instalaÃ§Ã£o e uso, bem como as tecnologias utilizadas.
 
-## Instalação
+## InstalaÃ§Ã£o
 
 Para clonar e instalar os projetos localmente, siga estas etapas:
 
-1. Clone o repositório:
+1. Clone o repositÃ³rio:
    ```sh
    git clone https://github.com/GabrielaZanetti/portifolio.git
+   
+2. Instale as dependencias:
+   ```sh
+   yarn install
+   ```
+   ou
+   ```sh
+   yarn install
+   ```
