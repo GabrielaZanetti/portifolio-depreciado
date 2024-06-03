@@ -13,7 +13,8 @@ Este repositório está sendo **depreciado** e não será mais mantido. Estamos 
 
 ### Acompanhe o Desenvolvimento
 
-Fique atento às atualizações. O novo repositório estará disponível em breve. Se você quiser acompanhar o desenvolvimento e as novidades, siga [meu perfil no GitHub]([https://github.com/seu-usuario](https://github.com/GabrielaZanetti)).
+Fique atento às atualizações. O novo repositório estará disponível em breve. Se você quiser acompanhar o desenvolvimento e as novidades,
+siga [meu perfil no GitHub](https://github.com/GabrielaZanetti).
 
 ### Agradecimentos
 
